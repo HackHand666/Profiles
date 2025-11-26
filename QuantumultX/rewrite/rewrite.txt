@@ -1,0 +1,7 @@
+#新版油管去广告
+#ctier=[A-Z] url 302 ctier=A
+#^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
+
+#解锁91短视频金币➕无限观看
+#^https?:\/\/.+\.(my10api|(.*91.*))\.(com|tips|app|xyz)(:\d{2,5})?\/api.php$ url script-response-body https://raw.githubusercontent.com/JungegeCN/JGG/master/91.js
+^https:\/\/(app|api|appapi)\.(qdjdswkj|rcljx|qishangzs|jisudaigou|mcmgsa)\.com url request-header (\r\n)X-AUTH-TOKEN:.+(\r\n) request-header $1X-AUTH-TOKEN:eyJhbGciOiJIUzUxMiIsImlhdCI6MTYzMDU2NTI2NywiZXhwIjoxOTQ1OTI1MjY3fQ.eyJpZCI6NDEzODUyMzN9.SjmcfGrdXoaFBW7prOl__OjNWEx7BWhTmiSyXPoatoUnQCcBS_Gs9nWw-vVJbrlyxT6BjelkmJB8mMj2JtLEQQ$2

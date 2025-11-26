@@ -1,0 +1,3 @@
+^https:\/\/game\.dominos\.com\.cn\/.+\/game\/gameDone url script-request-body https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js
+
+hostname =game.dominos.com.cn
