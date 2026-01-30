@@ -7,4 +7,4 @@ https://raw.githubusercontent.com/HackHand666/Profiles/refs/heads/main/Icon/byg.
 
 如有问题，欢迎反馈
 
-Update Data：2025-11-30
+Update Data：2026-01-30
