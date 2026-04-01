@@ -15,6 +15,16 @@
 # 解决方法：关[MITM][脚本][代理工具]方法选一即可
 
 #=============UserScript=============#
+[Rule]
+#车来了 去广告
+# hostname = pic1.chelaile.net.cn, api.chelaile.net.cn, atrace.chelaile.net.cn, web.chelaile.net.cn, cdn.*.chelaileapp.cn
+^https?:\/\/pic1\.chelaile\.net\.cn\/adv\/ reject
+^https?:\/\/(api|atrace)\.chelaile\.net\.cn\/adpub\/ reject
+^https?:\/\/api\.chelaile\.net\.cn\/goocity\/advert\/ reject
+^https?:\/\/atrace\.chelaile\.net\.cn\/adpub\/ reject-img
+^https?:\/\/atrace\.chelaile\.net\.cn\/exhibit\?&adv_image reject-img
+^https?:\/\/web\.chelaile\.net\.cn\/api\/adpub\/ad reject
+^https?:\/\/cdn\.\w{3}\.chelaileapp\.cn\/(api\/)?adpub reject
 
 [Script]
 #扫描全能王 hostname = *.camscanner.com, *.intsig.net
@@ -23,13 +33,5 @@ http-response ^https?:\/\/.*\.(intsig\.net|camscanner\.com) script-path=https://
 #美图秀秀 hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
 http-response ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js, requires-body=true, timeout=60, tag=美图秀秀VIP
 
-#车来了 去广告
-^https?:\/\/pic1.chelaile.net.cn\/adv\/ - reject
-^https?:\/\/(api|atrace)\.chelaile\.net\.cn\/adpub\/ - reject
-^https?:\/\/api\.chelaile\.net\.cn\/goocity\/advert\/ - reject
-^https?:\/\/atrace\.chelaile\.net\.cn\/adpub\/ - reject-img
-^https?:\/\/atrace\.chelaile\.net\.cn\/exhibit\?&adv_image - reject-img
-^https?:\/\/web\.chelaile\.net\.cn\/api\/adpub\/ - reject
-
 [MITM]
-hostname = *.camscanner.com, *.intsig.net, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, chelaile.net.cn
+hostname = *.camscanner.com, *.intsig.net, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, pic1.chelaile.net.cn, api.chelaile.net.cn, atrace.chelaile.net.cn, web.chelaile.net.cn, cdn.*.chelaileapp.cn
