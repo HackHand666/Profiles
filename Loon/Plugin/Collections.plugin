@@ -15,7 +15,7 @@
 # 解决方法：关[MITM][脚本][代理工具]方法选一即可
 
 #=============UserScript=============#
-[Rule]
+[Rewrite]
 #车来了 去广告
 # hostname = pic1.chelaile.net.cn, api.chelaile.net.cn, atrace.chelaile.net.cn, web.chelaile.net.cn, cdn.*.chelaileapp.cn
 ^https?:\/\/pic1\.chelaile\.net\.cn\/adv\/ reject
